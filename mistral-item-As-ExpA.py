@@ -502,14 +502,14 @@ if __name__ == '__main__':
     Directly output the passages you selected that have utility in generating the reference answer to the question. The format of the output is: 'My selection:[[i],[j],...].'. Only response the selection results, do not say any word or explain. 
     """
     main_list("trec", llm, tokenizer, instruct, "-iter-passages-list-no-ref8-", 0, sampling_params, -1, 0)
-    main_list("webap", llm, tokenizer, instruct, "-iter-passages-list-no-ref8-", 0, sampling_params, -1, 0)
+    
     
    
     instruct = """
     The reference answer may not be the correct answer, but it provides a pattern of the correct answer. Directly output whether the passage has utility in generating the reference answer to the question or not. If the passage has utility in generating the reference answer, output 'My judgment: Yes, the passage has utility in answering the question.'; otherwise, output 'My judgment: No, the passage has no utility in answering the question.'.
     """
     main("trec", llm, tokenizer, instruct, "-iter-passages-point-add-ref-", 0, sampling_params, -1, 0)
-    main("webap", llm, tokenizer, instruct, "-iter-passages-point-", 0, sampling_params, -1, 0)
+    
 
     
     
