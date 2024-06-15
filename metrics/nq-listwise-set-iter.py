@@ -58,10 +58,10 @@ def get_recs(response, ground_truth):
     acc = len([value for value in response if value in ground_truth])
     return acc/len(ground_truth) if len(ground_truth) > 0 else 0
 # 打开本地的json文件
-with open('/home/gomall/work/data/non_factoid_trec1920.json') as f:
+with open('data/non_factoid_trec1920.json') as f:
     data_non_fact = json.load(f)
 query_answer = {}
-file1 = open("/home/gomall/work/data/nq.json", "r", encoding="utf-8")
+file1 = open("data/nq.json", "r", encoding="utf-8")
 for line in file1:
     js = json.loads(line)
     query_answer[js["question"]] = js["answer"]
