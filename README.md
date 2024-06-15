@@ -16,7 +16,7 @@ Download Mistral from [huggiface](https://huggingface.co/mistralai/Mistral-7B-In
 ## ITEM via LLMs
 Taking the testing of Mistral-7B as an example, we demonstrated the use of four methods: ITEM-As, ITEM-ARs and single-shot-utility-judgments
 ```
-python item-As-ImpA.py
+python mistral/item-As-ImpA.py
 
 ```
 
