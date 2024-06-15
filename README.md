@@ -7,7 +7,7 @@ NQ from [NQ](https://ai.google.com/research/NaturalQuestions/download)
 ## Get the retrieval data
 BM25 for the TREC and WebAP datasets, RocketQAv2 for the NQ dataset.
 
-## Create the condidate passage list
+## Create the candidate passage list
 We have also provided the final dataset in "data/trec.json",  "data/webap.json", and [NQ](https://drive.google.com/file/d/1pAK6CYbuN7qrXg60A_TkN6_sExg6IREg/view?usp=sharing).
 
 ## Download the LLMs
@@ -19,4 +19,5 @@ Taking the testing of Mistral-7B as an example, we demonstrated the use of four 
 python item-As-ImpA.py
 
 ```
+
 
