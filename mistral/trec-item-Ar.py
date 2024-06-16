@@ -354,8 +354,8 @@ def main_list(file_type, llm, tokenizer, instruct, types, number, sampling_param
     
 if __name__ == '__main__':
     sampling_params = SamplingParams(temperature=0.0, max_tokens=4096)
-    tokenizer = transformers.AutoTokenizer.from_pretrained("/home/gomall/models/Mistral_7B_Instruct_v0-2/")
-    llm = LLM(model="/home/gomall/models/Mistral_7B_Instruct_v0-2/")
+    tokenizer = transformers.AutoTokenizer.from_pretrained("models/Mistral_7B_Instruct_v0-2/")
+    llm = LLM(model="models/Mistral_7B_Instruct_v0-2/")
 
     instruct = """
     Directly output the passages you selected that have utility in generating the reference answer to the question. The format of the output is: 'My selection:[[i],[j],...].'. Only response the selection results, do not say any word or explain. 
