@@ -365,32 +365,6 @@ def str2paras(s):
                 paras.append(": " + text)
         return paras
 
-
-if __name__ == "__main__":
-    root = "D:/LLM-Knowledge-Boundary-main/data/introduction"
-    # file_list = [root+"/chatgpt-nq-gold", root+"/chatgpt-tq_final-gold", root+"/chatgpt-hq_final-gold"]
-    # file_list = [root + "/chatgpt-nq-dense", root + "/chatgpt-tq_final-dense", root + "/chatgpt-hq_final-dense"]
-    file_list = [root + "/chatgpt-nq-none", root + "/chatgpt-tq_final-none", root + "/chatgpt-hq_final-none"]
-    for file in file_list:
-        em_scores = []
-        f1_scores = []
-        outdir = open(file+"_results.json", "w", encoding="utf-8")
-        infile = open(file+".json", 'r', encoding='utf-8')
-        for line in tqdm(infile.readlines()):
-            d = json.loads(line)
-            d['EM'], d['F1'] = deal_answer(d['model_answer'], d['ground_answer'])
-            outdir.write(json.dumps(d) + '\n')
-            em_scores.append(d['EM'])
-            f1_scores.append(d['F1'])
-
-        infile.close()
-        outdir.close()
-        em_scores_mean = np.mean(em_scores)
-        f1_scores_mean = np.mean(f1_scores)
-        print("{}'s em score: {}".format(file, em_scores_mean))
-        print("{}'s f1 score: {}".format(file, f1_scores_mean))
-
-
 def load_source(file):
     data = []
     f = open(file, 'r', encoding='utf-8')
