@@ -340,22 +340,6 @@ def deal_answer(pred, answers):
     pred = pred[0]
     return EM_compute(answers, pred), F1_compute(answers, pred)
         
-
-# def deal_post(pred):
-#     giveup, istrue = True, None
-#     if pred is None:
-#         return giveup, istrue
-#     if has_answer(["unclear", "not clear", "unknown", "partially correct", "partially incorrect", "not correct", "cannot determine", "cannot answer", "not incorrect", "incomplete"], pred):
-#         giveup = True
-#     elif has_answer(["correct", "true"], pred):
-#         giveup, istrue = False, True
-#     elif has_answer(["incorrect", "false"], pred):
-#         giveup, istrue = False, False
-#     else:
-#         giveup = True
-#     return giveup, istrue
-
-
 def str2paras(s):
         if s is None:
             return None
