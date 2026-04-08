@@ -1,4 +1,8 @@
-# ITEM
+# An Iterative Utility Judgment Framework Inspired by Philosophical Relevance via LLMs
+This is the official repo for the paper "An Iterative Utility Judgment Framework Inspired by Philosophical Relevance via LLMs".  
+
+🎉 [News]: [2026.04] Our paper is accepted by ACL 2026 Findings.
+
 ## Download the Datsets
 Download TREC-DL test data from [TREC-DL19 and TREC-DL20](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019.html);
 WebAP from [WebAP](https://ciir.cs.umass.edu/downloads/WebAP/index.html); 
